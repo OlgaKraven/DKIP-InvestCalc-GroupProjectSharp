@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "inventoryNumber": "PC-001",
+    "name": "Рабочая станция бухгалтера",
+    "type": "Компьютер",
+    "manufacturer": "Dell",
+    "model": "OptiPlex 7090",
+    "serialNumber": "SN-DEL-7090-001",
+    "location": "Кабинет 203",
+    "status": "В эксплуатации",
+    "purchaseDate": "2022-09-15",
+    "warrantyEndDate": "2025-09-15",
+    "comment": "Используется для работы с 1С"
+  },
+  {
+    "id": 2,
+    "inventoryNumber": "PR-014",
+    "name": "Сетевой принтер",
+    "type": "Принтер",
+    "manufacturer": "HP",
+    "model": "LaserJet Pro M404dn",
+    "serialNumber": "SN-HP-404-014",
+    "location": "Кабинет 101",
+    "status": "В эксплуатации",
+    "purchaseDate": "2021-03-10",
+    "warrantyEndDate": "2024-03-10",
+    "comment": "Общий принтер отдела"
+  }
+]
