@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build .NET solution
+    name: Build ServiceDesk.Api
     runs-on: ubuntu-latest
 
     steps:
@@ -21,16 +21,19 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: Restore dependencies
-        run: dotnet restore ./Lol.sln
+      - name: .NET info
+        run: dotnet --info
 
-      - name: Build solution
-        run: dotnet build ./Lol.sln -c Release --no-restore
+      - name: Restore
+        run: dotnet restore ./ppSIS/ServiceDesk.Api/ServiceDesk.Api.csproj
+
+      - name: Build
+        run: dotnet build ./ppSIS/ServiceDesk.Api/ServiceDesk.Api.csproj -c Release --no-restore
 
       - name: Test (skip if no tests)
         run: |
           if ls **/*Tests*.csproj 1> /dev/null 2>&1; then
-            dotnet test ./Lol.sln -c Release --no-build --verbosity normal
+            dotnet test -c Release --no-build --verbosity normal
           else
             echo "No test projects found. Skipping tests."
           fi
